@@ -20,3 +20,5 @@ service = MyService()
 
 uri = deamon.register(service)
 ```
+
+Don't forget to expose the functions of the service that you want to be callable by adding the decorator @Pyro4.expose on them
