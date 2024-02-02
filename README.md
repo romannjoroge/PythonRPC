@@ -36,4 +36,12 @@ Don't forget to expose the service that you want to be callable by adding the de
 
 ## Calling services on the daemon
 
-To call a service on a daemon you need a proxy. The proxy will be incharge of
+To call a service on a daemon you need a proxy. The proxy will be incharge of taking the request from your client and passing it to the server. It then returns to the clients the results from the server.
+
+To get a proxy for the service you need the services URI. An example is:
+
+```python
+proxy = Pyro4.Proxy(uri)
+```
+
+You then call methods in the proxy as if it were an object of the service e.g you can do proxy.add(1).
