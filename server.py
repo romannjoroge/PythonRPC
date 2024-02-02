@@ -4,21 +4,19 @@
 import Pyro4 # Help in making daemon
 import typing 
 # Defining the server
+@Pyro4.expose
 class MyServer:
     # Process to increment an integer
-    @Pyro4.expose
-    def increment(x: int) -> int:
+    def increment(self, x: int) -> int:
         return x + 1
     
     # Accepts a float and an int. Squares the float and adds the int to it
-    @Pyro4.expose
-    def squareAndAdd(f: float, x: int) -> float:
+    def squareAndAdd(self, f: float, x: int) -> float:
         fsquared = f ** 2
         return fsquared + x
     
     # Reverses a string
-    @Pyro4.expose
-    def reverseString(s: str) -> str:
+    def reverseString(self, s: str) -> str:
         return s[::-1]
     
 # Register MyServer as a Pyro4 object
