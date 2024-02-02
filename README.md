@@ -45,3 +45,9 @@ proxy = Pyro4.Proxy(uri)
 ```
 
 You then call methods in the proxy as if it were an object of the service e.g you can do proxy.add(1).
+
+For more information on proxies you can watch this video:
+
+<a href="https://youtu.be/JJ0St6OmTp0?si=7i5ueqIJpO5DmP-l">
+<img alt="Watch This Video On Proxies" src="https://i.ytimg.com/an_webp/JJ0St6OmTp0/mqdefault_6s.webp?du=3000&sqp=CPnA9K0G&rs=AOn4CLBOXzW_djL7M7doqBk9u4tLYAeQCg"
+<a/>
